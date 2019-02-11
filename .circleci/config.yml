@@ -1,0 +1,10 @@
+version: 2
+jobs:   
+  build:
+    machine: true
+    steps:
+      - checkout:
+      - run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - run: docker build -t pablokbs/hola-docker:$CIRCLE_TAG
+      - run: docker push pablokbs/hola-docker:$CIRCLE_TAG
