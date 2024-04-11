@@ -1,0 +1,3 @@
+services:
+  nginx-nerdearla:
+    image: pablokbs/hola-docker:COMMIT_SHA
