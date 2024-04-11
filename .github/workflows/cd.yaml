@@ -55,4 +55,4 @@ jobs:
         script: |
           cd /root
           sed -i 's/COMMIT_SHA/${{ github.sha }}/g' docker-compose.override.yaml
-          docker-compose up -d
+          docker compose up -d
